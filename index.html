@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line 消息排程器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Line 消息排程器</h1>
+        <form id="messageForm">
+            <div class="form-group">
+                <label for="location">發送地點：</label>
+                <select id="location" name="location" required>
+                    <option value="群組">群組</option>
+                    <option value="個人聊天室">個人聊天室</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sendTime">發送時間：</label>
+                <input type="datetime-local" id="sendTime" name="sendTime" required>
+            </div>
+            <div class="form-group">
+                <label for="message">事情（要發送的訊息）：</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="affectedPeople">影響的人：</label>
+                <input type="text" id="affectedPeople" name="affectedPeople" required>
+            </div>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
